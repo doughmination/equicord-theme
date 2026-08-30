@@ -1,0 +1,42 @@
+/**
+ * @name        Doughmination's Theme
+ * @author      doughmination
+ * @description My basic Equicord theme I use.
+ * @version     1.1.0
+ */
+
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/BasicBackground/BasicBackground.theme.css");
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css");
+
+
+@font-face {
+  font-family: "Comic Code";
+  src: url("https://m.doughmination.gay/f/Comic-Code/woff2/ComicCode-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Maple Mono";
+  src: url("https://m.doughmination.gay/f/Maple-Mono/Default/woff2/MapleMono-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  --background: url("https://m.doughmination.gay/img/bg/main.png");
+  --backgroundposition: center;
+  --backgroundsize: cover;
+  --backgroundblur: 0;
+
+  --transparencycolor: 0, 0, 0;
+  --transparencyalpha: 0.3;
+
+  --guildchanneltransparency: 0.15;
+  --chatinputtransparency: 0.0;
+  --memberlisttransparency: 0.0;
+  --messagetransparency: 0.5;
+
+  --font: "Comic Code", "gg sans", "Noto Sans", sans-serif;
+  --font-code: "Maple Mono", monospace;
+
+  --popout: var(--background);
+  --backdrop: rgba(0, 0, 0, 0.85);
+}
