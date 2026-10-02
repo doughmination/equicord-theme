@@ -1,0 +1,90 @@
+/**
+ * @name        Doughmination's Theme
+ * @author      doughmination
+ * @authorId 1025770042245251122
+ * @description My basic Equicord theme I use.
+ * @version     1.2.0
+ * @website https://doughmination.github.io/equicord-theme
+ * @source https://github.com/doughmination/equicord-theme
+ */
+
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/BasicBackground/BasicBackground.theme.css");
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css");
+
+
+@font-face {
+  font-family: "Comic Code";
+  src: url("https://m.doughmination.gay/f/Comic-Code/woff2/ComicCode-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Maple Mono";
+  src: url("https://m.doughmination.gay/f/Maple-Mono/Default/woff2/MapleMono-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  /* ── Palette (sampled from avatar) ───────────────── */
+  --dough-blue:      #383dcd; /* main background blue  */
+  --dough-indigo:    #565b9d; /* jacket / shadow tones */
+  --dough-navy:      #1c1f42; /* darkest outlines      */
+  --dough-sky:       #7491ce; /* eyes + hair streak    */
+  --dough-periwinkle:#929cc0; /* hair shading          */
+  --dough-ice:       #cfd7f3; /* hair highlight        */
+  --dough-blush:     #f1e4ea; /* skin / dress          */
+
+  /* ── BasicBackground ─────────────────────────────── */
+  --background: url("https://m.doughmination.gay/img/bg/halloween.png");
+  --backgroundposition: center;
+  --backgroundsize: cover;
+  --backgroundblur: 0;
+
+  --transparencycolor: 28, 31, 66;   /* = --dough-navy */
+  --transparencyalpha: 0.3;
+
+  --guildchanneltransparency: 0.15;
+  --chatinputtransparency: 0.0;
+  --memberlisttransparency: 0.0;
+  --messagetransparency: 0.5;
+
+  --accentcolor: 56, 61, 205;        /* = --dough-blue */
+  --accentcolor2: 116, 145, 206;     /* = --dough-sky  */
+  --linkcolor: 116, 145, 206;
+  --mentioncolor: 116, 145, 206;
+
+  --font: "Comic Code", "gg sans", "Noto Sans", sans-serif;
+  --font-code: "Maple Mono", monospace;
+
+  --popout: var(--background);
+  --backdrop: rgba(28, 31, 66, 0.85);
+
+  /* ── Discord overrides ───────────────────────────── */
+  --brand-500: var(--dough-blue);
+  --brand-560: var(--dough-indigo);
+  --brand-experiment: var(--dough-blue);
+  --text-link: var(--dough-sky);
+  --header-primary: var(--dough-ice);
+  --header-secondary: var(--dough-periwinkle);
+  --text-normal: var(--dough-blush);
+  --text-default: var(--dough-blush);
+  --text-muted: var(--dough-periwinkle);
+  --interactive-normal: var(--dough-periwinkle);
+  --interactive-hover: var(--dough-ice);
+  --interactive-active: #ffffff;
+  --scrollbar-thin-thumb: var(--dough-indigo);
+  --scrollbar-auto-thumb: var(--dough-indigo);
+}
+
+/* Make sure code blocks pick up Maple Mono */
+code,
+pre,
+.hljs,
+[class*="codeContainer"] {
+  font-family: var(--font-code) !important;
+}
+
+/* Text selection in the palette */
+::selection {
+  background: var(--dough-sky);
+  color: var(--dough-navy);
+}
