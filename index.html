@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doughmination Theme</title>
+
+    <style>
+        @font-face {
+            font-family: "Comic Code";
+            src: url("https://m.doughmination.gay/f/Comic-Code/woff2/ComicCode-Regular.woff2") format("woff2");
+            font-display: swap;
+        }
+
+        :root {
+            color-scheme: dark;
+
+            --background: url("https://m.doughmination.gay/img/bg/main.png");
+            --background-color: #0b090a;
+            --text: #ffffff;
+            --muted: #b5b1b3;
+            --card: rgba(0, 0, 0, 0.45);
+            --card-hover: rgba(0, 0, 0, 0.6);
+            --border: rgba(255, 255, 255, 0.08);
+            --accent: #7289da;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            min-height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 100vh;
+            padding: 2rem;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.35),
+                    rgba(0, 0, 0, 0.35)
+                ),
+                var(--background);
+
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+
+            color: var(--text);
+            font-family: "Comic Code", "gg sans", "Noto Sans", sans-serif;
+        }
+
+        main {
+            width: min(100%, 650px);
+        }
+
+        header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0 0 0.5rem;
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        header p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        .themes {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .theme {
+            display: block;
+            padding: 1.25rem 1.5rem;
+
+            border: 1px solid var(--border);
+            border-radius: 12px;
+
+            background: var(--card);
+            color: var(--text);
+
+            text-decoration: none;
+
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .theme:hover {
+            background: var(--card-hover);
+            border-color: rgba(255, 255, 255, 0.16);
+            transform: translateY(-2px);
+        }
+
+        .theme:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+        .theme-name {
+            display: block;
+            margin-bottom: 0.35rem;
+
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .theme-description {
+            display: block;
+
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 2rem;
+
+            color: var(--muted);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .theme {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Doughmination's Themes</h1>
+            <p>Equicord themes by Doughmination</p>
+        </header>
+
+        <section class="themes" aria-label="Available themes">
+            <a class="theme" href="./main.theme.css">
+                <span class="theme-name">Main Theme</span>
+                <span class="theme-description">
+                    The main Doughmination theme.
+                </span>
+            </a>
+
+            <a class="theme" href="./halloween-26.theme.css">
+                <span class="theme-name">Halloween 2026</span>
+                <span class="theme-description">
+                    A spooky seasonal variant of the Doughmination theme.
+                </span>
+            </a>
+        </section>
+
+        <footer>
+            Doughmination · Equicord Themes
+        </footer>
+    </main>
+</body>
+</html>
